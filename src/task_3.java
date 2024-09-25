@@ -7,10 +7,10 @@ interface Triad1 {
     void print();
 }
 
-class Date implements Triad1 {
+class Date1 implements Triad1 {
     private LocalDate date;
 
-    public Date() {
+    public Date1() {
         this.date = LocalDate.now();
     }
 
@@ -33,17 +33,17 @@ class Date implements Triad1 {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
-        if (!(obj instanceof Date))
+        if (!(obj instanceof Date1))
             return false;
-        Date other = (Date) obj;
+        Date1 other = (Date1) obj;
         return this.date.equals(other.date);
     }
 }
 
-class Time implements Triad1 {
+class Time1 implements Triad1 {
     private LocalTime time;
 
-    public Time() {
+    public Time1() {
         this.time = LocalTime.now();
     }
 
@@ -66,9 +66,9 @@ class Time implements Triad1 {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
-        if (!(obj instanceof Time))
+        if (!(obj instanceof Time1))
             return false;
-        Time other = (Time) obj;
+        Time1 other = (Time1) obj;
         return this.time.equals(other.time);
     }
 }
@@ -77,10 +77,10 @@ public class task_3 {
     public static void main(String[] args) {
         Triad1[] triads = new Triad1[4];
 
-        triads[0] = new Date();
-        triads[1] = new Date();
-        triads[2] = new Time();
-        triads[3] = new Time();
+        triads[0] = new Date1();
+        triads[1] = new Date1();
+        triads[2] = new Time1();
+        triads[3] = new Time1();
 
         for (Triad1 triad : triads) {
             triad.print();
@@ -88,8 +88,8 @@ public class task_3 {
             triad.print();
         }
 
-        Date date1 = new Date();
-        Date date2 = new Date();
+        Date1 date1 = new Date1();
+        Date1 date2 = new Date1();
         System.out.println("Date 1: " + date1);
         System.out.println("Date 2: " + date2);
         System.out.println("Are dates equal? " + date1.equals(date2));
