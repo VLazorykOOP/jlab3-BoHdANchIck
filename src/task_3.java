@@ -1,13 +1,13 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-interface Triad {
+interface Triad1 {
     void increment();
 
     void print();
 }
 
-class Date implements Triad {
+class Date implements Triad1 {
     private LocalDate date;
 
     public Date() {
@@ -40,7 +40,7 @@ class Date implements Triad {
     }
 }
 
-class Time implements Triad {
+class Time implements Triad1 {
     private LocalTime time;
 
     public Time() {
@@ -75,14 +75,14 @@ class Time implements Triad {
 
 public class task_3 {
     public static void main(String[] args) {
-        Triad[] triads = new Triad[4];
+        Triad1[] triads = new Triad1[4];
 
         triads[0] = new Date();
         triads[1] = new Date();
         triads[2] = new Time();
         triads[3] = new Time();
 
-        for (Triad triad : triads) {
+        for (Triad1 triad : triads) {
             triad.print();
             triad.increment();
             triad.print();
